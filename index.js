@@ -69,7 +69,7 @@ client.on("message", async message => {
         message.channel.send(sayMessage);
     }
 
-    if (command === "I'm back!", "im back!", "I'm back", "im back") {
+    if (command.startsWith("I'm back!", "im back!", "I'm back", "im back") {
         // Response to when a user returns.
         let temp = [ "Okaerinasai!", "Welcome back!", "Yaaay!", "I missed you!" ];
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
