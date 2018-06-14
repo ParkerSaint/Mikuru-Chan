@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ParkerSaint/Mikuru-Chan#readme",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "nodemon": "^1.17.5"
   }
 }
