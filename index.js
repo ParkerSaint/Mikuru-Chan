@@ -69,9 +69,10 @@ client.on("message", async message => {
         message.channel.send(sayMessage);
     }
 
-    if (command === "hello") {
-        // Hello command. Dab.
-        const m = await message.channel.send("I'm gay. x20");
+    if (command === "sample") {
+        // use this simple format for random replies from a message query
+        let temp = [ "response 1", "response2", "response3" ];
+        message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
 });
 
