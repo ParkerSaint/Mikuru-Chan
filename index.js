@@ -69,11 +69,12 @@ client.on("message", async message => {
         message.channel.send(sayMessage);
     }
 
-    if (command === "sample") {
-        // use this simple format for random replies from a message query
-        let temp = [ "response 1", "response2", "response3" ];
+    if (command === "I'm back!", "im back!", "I'm back", "im back") {
+        // Response to when a user returns.
+        let temp = [ "Okaerinasai!", "Welcome back!", "Yaaay!", "I missed you!" ];
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
+
 });
 
 client.login(config.token);
