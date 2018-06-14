@@ -134,6 +134,10 @@ client.on("message", async message => {
         message.channel.bulkDelete(fetched)
             .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
+    if (command === "hello") {
+        // Hello command. Dab.
+        const m = await message.channel.send("I'm gay. x20");
+    }
 });
 
 client.login(config.token);
