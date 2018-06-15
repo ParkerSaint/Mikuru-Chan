@@ -17,4 +17,4 @@ exports.run = (client, message, args) => {
             message.channel.stopTyping();
         }, 3500);
     };
-
+};
