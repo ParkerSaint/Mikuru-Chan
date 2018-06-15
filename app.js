@@ -144,6 +144,10 @@ client.on("message", async message => {
          };
          break;
 
+    case "sample message":
+         // do thing
+         break;
+
     default:
         break;
     };
