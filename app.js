@@ -16,7 +16,7 @@ const config = require("./config.json");
 client.on("ready", () => {
     // This event will run if the bot starts, and logs in, successfully.
     console.log(`Mikuru-Chan has started.`);
-    client.user.setActivity(`Not being gay`);
+    client.user.setActivity(`Somthing Normal`);
 });
 
 client.on("message", async message => {
