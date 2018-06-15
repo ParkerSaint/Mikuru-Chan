@@ -1,5 +1,6 @@
-// Load up the discord.js library
+// Load up the libraries
 const Discord = require("discord.js");
+const request = require("request")
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -86,7 +87,7 @@ client.on("message", async message => {
         let temp = ["Hiya!", "Hello!", "ohayou, konnichiwa, konbanwa"]; // These are the three time of day based responses.   
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
-
+    
 });
 
 client.login(config.token);
