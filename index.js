@@ -78,7 +78,7 @@ client.on("message", async message => {
         setTimeout(() => {
              message.reply(temp[Math.floor(Math.random() * temp.length)]);
             message.channel.stopTyping();
-        }, 3000);
+        }, 2000);
     }
 
 });
