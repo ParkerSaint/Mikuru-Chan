@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
         ];
         message.channel.startTyping();
         setTimeout(() => {
-            message.reply(temp[Math.floor(Math.random() * temp.length)]);
+            message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
             message.channel.stopTyping();
         }, 3500);
     };
