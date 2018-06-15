@@ -73,7 +73,7 @@ client.on("message", async message => {
 
     if (messageTrimmed.toLowerCase().replace("'", "") === "im back") {
       // When the user says a variation of "I'm back" mikuru gives a random response
-        let temp = ["response 1", "response2", "response3"];
+        let temp = ["Welcome back!", "Okaerinasai!", "I missed you!"];
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
 
