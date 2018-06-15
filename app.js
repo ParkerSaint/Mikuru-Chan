@@ -148,6 +148,46 @@ client.on("message", async message => {
          // do thing
          break;
 
+    case "what":
+         if (args.join(" ").toLowerCase() === "are you doing") {
+             // When the user says a variation of "are you doing" mikuru gives a random response
+             let temp = [
+                 "I'm knitting a scarf for myself right now. (๑•̀ㅂ•́)و", "Talking to you, dummy~ (￣ω￣)",
+                 "I'm watching Kokoro Connect.", "I'm watching Haganai.", "I'm watching SAO. I know, it's bad. ¯\_(ツ)_/¯",
+                 "I'm watching Darling in the Franxx.", "I'm watching Angel Beats. ( ≧Д≦)",
+                 "I'm watching Blade Dance~", "I'm watching the Asterisk War.", "I'm listening to some music.", 
+                 "I'm reading a book~", "I ***was*** taking a nap. (；￣Д￣）", "I'm doing homework.",
+                 "I was doodling in my sketchbook.", "I was texting my friends. (＾▽＾)", "I was doing some chores.",
+                 "Playing with my tortoise. (*＾▽＾)／", "Playing with Bartholomew. (*＾▽＾)／", "Oh~ I was just daydreaming.",
+                 "I'm doing my hair~", "I was watching a movie.", "Oh me? Just wasting the day away."
+             ];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 3500);
+         };
+
+         if (args.join(" ").toLowerCase() === "is your name") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["My full name is Akara Mikuru~"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3500);
+        };
+
+        if (args.join(" ").toLowerCase() === "time is it") {
+            // When the user says a variation of "time is it" mikuru tells them the current time of Japan
+            let temp = ["It's high noon. >_>"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3500);
+        };
+         break;
     default:
         break;
     };
