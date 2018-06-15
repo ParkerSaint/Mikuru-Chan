@@ -11,7 +11,7 @@
 
     if (args.join(" ").toLowerCase() === "hate you") {
         // When the user says a variation of "hate you" mikuru gives a random response
-        let temp = ["(´；Д；`)", ".°(ಗдಗ。)°.", "*Crying*"];
+        let temp = ["(´；Д；`)", ".°(ಗдಗ。)°.", ";-;"];
         message.channel.startTyping();
         setTimeout(() => {
             message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
