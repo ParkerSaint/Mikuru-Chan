@@ -8,6 +8,7 @@
             message.channel.stopTyping();
         }, 2000);
     };
+    
    if (args[0].toLowerCase() === "gay") {
         // When the user says a variation of "I'm gay" mikuru gives a random response
         let temp = ["I love you the way you are. ╰(´︶`)╯♡", "You'll always be the same to me~", "That doesn't change my view of you."];
