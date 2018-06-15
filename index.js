@@ -49,8 +49,9 @@ client.on("message", async message => {
     // args = ["Is", "this", "the", "real", "life?"]
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-
-    // Let's go with a few common example commands! Feel free to delete or change those.
+    // messageTrimmed takes the original message.content, and removes the prefix
+    const messageTrimmed = message.content.slice(config.prefix.length).trim();
+    console.log(messageTrimmed);
 
     if (command === "ping") {
         // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
@@ -69,9 +70,10 @@ client.on("message", async message => {
         message.channel.send(sayMessage);
     }
 
-    if (command.startsWith("I'm back!", "im back!", "I'm back", "im back") {
-        // Response to when a user returns.
-        let temp = [ "Okaerinasai!", "Welcome back!", "Yaaay!", "I missed you!" ];
+
+    if (messageTrimmed.toLowerCase().replace("'", "") === "im back") {
+      // When the user says a variation of "I'm back" mikuru gives a random response
+        let temp = ["response 1", "response2", "response3"];
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
 
