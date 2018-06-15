@@ -35,11 +35,11 @@ client.on("message", async message => {
     if (message.content.toLowerCase().indexOf(config.prefix) !== 0) return;
 
  
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
+    var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    var command = args.shift().toLowerCase();
      // Here we separate our "command" name, and our "arguments" for the command.
 
-    const messageTrimmed = message.content.slice(config.prefix.length).trim();
+    var messageTrimmed = message.content.slice(config.prefix.length).trim();
      // messageTrimmed takes the original message.content, and removes the prefix
     console.log(messageTrimmed); // logs the message sent in the console
     
