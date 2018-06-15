@@ -71,12 +71,12 @@ client.on("message", async message => {
     }
 
 
-    if (messageTrimmed.toLowerCase().replace("'", "") === "im back") {
+    if (messageTrimmed.replace("'", "").toLowerCase() === "im back") {
       // When the user says a variation of "I'm back" mikuru gives a random response
-        let temp = ["Welcome back!", "Okaerinasai!", "I missed you!"];
+        let temp = ["Welcome back~ ( ^ω^ )", "Okaerinasai~", "I missed you~"];
         message.channel.startTyping();
         setTimeout(() => {
-             message.reply(temp[Math.floor(Math.random() * temp.length)]);
+            message.reply(temp[Math.floor(Math.random() * temp.length)]);
             message.channel.stopTyping();
         }, 2000);
     }
