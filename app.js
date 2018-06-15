@@ -1,6 +1,5 @@
 // Load up the libraries
 const Discord = require("discord.js");
-const request = require("request");
 const fs = require("fs");
 
 // This is your client. Some people call it `bot`, some people call it `self`, 
