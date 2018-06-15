@@ -87,6 +87,15 @@ client.on("message", async message => {
         let temp = ["Hiya!", "Hello!", "ohayou, konnichiwa, konbanwa"]; // These are the three time of day based responses.   
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
     }
+
+    if (command === "speak") {
+        // she will send a tts message send a text to speach message
+        const sayMessage = args.join(" ");
+        message.delete().catch(O_o => { });
+        message.channel.send(sayMessage, {
+            tts: true
+        })
+    }
     
 });
 
