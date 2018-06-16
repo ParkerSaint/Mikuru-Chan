@@ -1,18 +1,14 @@
-// Load up the libraries
+// Load uthe libraries
 const Discord = require("discord.js");
 const request = require("request");
 const fs = require("fs");
 
-// This is your client. Some people call it `bot`, some people call it `self`, 
-// some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
-// this is what we're refering to. Your client.
 const client = new Discord.Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
-// config.token contains the bot's token
-// config.prefix contains the message prefix.
 
+// Load in mikuru's info
 const info = require("./mikuru.json");
 
 client.on("ready", () => {
@@ -24,24 +20,19 @@ client.on("ready", () => {
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
 
-    // It's good practice to ignore other bots. This also makes your bot ignore itself
-    // and not get into a spam loop (we call that "botception").
+
     if (message.author.bot) return;
 
     // Check to see if the begining of the message has any of the prefixes
-    let correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1
+    let correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1;
 
-    // Also good practice to ignore any message that does not start with our prefix, 
-    // which is set in the configuration file.
+    // Ignore any message that does not start with our prefix, 
     if (!correctPrefix) return;
 
     // Here we separate our "command" name, and our "arguments" for the command. 
-    // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
-    // command = say
-    // args = ["Is", "this", "the", "real", "life?"]
     const args = message.content.replace(/[,.!?]/gi, '').slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    console.log(command + " " + args.join(" "))
+    console.log(command + " " + args.join(" "));
 
 
     switch (command) {
@@ -56,9 +47,7 @@ client.on("message", async message => {
         // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
         // To get the "message" itself we join the `args` back into a string with spaces: 
         const sayMessage = args.join(" ");
-        // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
         message.delete().catch(O_o => {});
-        // And we get the bot to say the thing: 
         message.channel.send(sayMessage);
         break;
 
@@ -150,7 +139,7 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 2300);
         };
-         break;
+        break;
 
     case "i":
          if (args.join(" ").toLowerCase() === "love you") {
@@ -172,7 +161,7 @@ client.on("message", async message => {
                  message.channel.stopTyping();
              }, 1000);
          };
-         break;
+        break;
 
     case "what":
          if (args.join(" ").toLowerCase() === "are you doing") {
@@ -271,7 +260,7 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 800);
         };
-         break;
+        break;
 
     case "where":
         if (args.join(" ").toLowerCase() === "are you") {
@@ -327,7 +316,7 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 4000);
         };
-         break;
+        break;
     
     case "do":
          if (args.join(" ").toLowerCase() === "you love me") {
@@ -373,11 +362,11 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 2800);
         };
-          break;
+        break;
         
     case "translate":
         let request = require('request');
-        let url = "https://jisho.org/api/v1/search/words?keyword=" + args[0]
+        let url = "https://jisho.org/api/v1/search/words?keyword=" + args[0];
         request({
             url: url,
             json: true
