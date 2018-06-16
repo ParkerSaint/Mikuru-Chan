@@ -92,7 +92,7 @@ client.on("message", async message => {
 
     case "hello":
         // When the user says a variation of hello Mikuru gives a random response
-        let temp = ["Hiya!", "Hello!", "ohayou, konnichiwa, konbanwa"]; // These are the three time of day based responses.   
+        let temp = ["Hiya~", "Hello~", "Hajimemashite~"]; // These are the three time of day based responses.   
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
         break;
 
@@ -114,6 +114,16 @@ client.on("message", async message => {
                  "I'm good, I guess. (^´-｀^)", "I'm feeling under the weather.", "I'm really angry right now. ( ╬◣ 益◢)",
                  "I'm not fine at all. 。・°°・(＞_＜)・°°・。"
              ];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 3500);
+            
+         };
+         if (args.join(" ").toLowerCase() === "hot am i") {
+             // When the user says a variation of "love you" mikuru gives a random response
+             let temp = ["I would say pretty hot. ♥(ˆ⌣ˆԅ)", "You're hot, I guess.", "Is it me or is it hot in here?"];
              message.channel.startTyping();
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
@@ -142,10 +152,6 @@ client.on("message", async message => {
                  message.channel.stopTyping();
              }, 1000);
          };
-         break;
-
-    case "sample message":
-         // do thing
          break;
 
     case "what":
@@ -188,6 +194,63 @@ client.on("message", async message => {
             }, 3500);
         };
          break;
+
+    case "where":
+        if (args.join(" ").toLowerCase() === "are you") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["Nichō, Japan."];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2000);
+        };
+
+        if (args.join(" ").toLowerCase() === "is my head") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["Oh, what happened to it? ｢(ﾟ<ﾟ)ﾞ??", "What? Is that a joke? /(@ﾟﾍﾟ@)", 
+            "Uh, it's on your neck. (￣(エ)￣)ゞ"
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+        };
+
+        if (args.join(" ").toLowerCase() === "are your parents") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["I was conceived in Parker's thoughts~ ♡(ŐωŐ人)"]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+        };
+
+        if (args.join(" ").toLowerCase() === "is the kush") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["Um...", "Uh...", "I'm sorry?"]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1200);
+        };
+
+        if (args.join(" ").toLowerCase() === "is my kush") {
+            // When the user says a variation of "is your name" mikuru tells them her name
+            let temp = ["Why would I know where you keep your... drugs?", 
+            "You really should stop using those kind of things.", "That's not healthy, you know."
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3500);
+        };
+         break;
+
     default:
         break;
     };
