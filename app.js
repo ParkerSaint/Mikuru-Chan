@@ -339,6 +339,25 @@ client.on("message", async message => {
         };
           break;
 
+    case "translate":
+        let request = require('request');
+        let url = "https://jisho.org/api/v1/search/words?keyword=" + args[0]
+        request({
+            url: url,
+            json: true
+        }, function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            message.channel.startTyping();
+            setTimeout(() => {
+                let jap = body.data[0].japanese[0];
+                let def = body.data[0].senses[0].english_definitions[0];
+                message.channel.send("Word: " + jap.word + " Reading: " + jap.reading + " English Definition: " + def);
+                message.channel.stopTyping();
+            }, 2500);
+            }
+        })
+        break;
+
     default:
         break;
     };
