@@ -13,6 +13,8 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
+const info = require("./mikuru.json");
+
 client.on("ready", () => {
     // This event will run if the bot starts, and logs in, successfully.
     console.log(`Mikuru-Chan has started.`);
@@ -372,7 +374,7 @@ client.on("message", async message => {
             }, 2800);
         };
           break;
-
+        
     case "translate":
         let request = require('request');
         let url = "https://jisho.org/api/v1/search/words?keyword=" + args[0]

@@ -1,5 +1,11 @@
 {
-    "name": "akara mikuru",
-    "height": "170"
+    "name": "Akara Mikuru",
+    "height": 170,
+    "location": "Nichō, Japan",
+    "age": 16,
+    "birthDate": "July 26th",
+    "bloodType": "🅱",
+    "pet": "Tortoise",
+    "food": "Eggplant"
 
 }
