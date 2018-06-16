@@ -97,7 +97,11 @@ client.on("message", async message => {
     case "hello":
         // When the user says a variation of hello Mikuru gives a random response
         let temp = ["Hiya~", "Hello~", "Hajimemashite~"];    
-        message.reply(temp[Math.floor(Math.random() * temp.length)]);
+        message.channel.startTyping();
+             setTimeout(() => {
+                 message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 600);
         break;
 
     case "how":
