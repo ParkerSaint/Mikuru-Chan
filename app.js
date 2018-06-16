@@ -25,17 +25,21 @@ client.on("message", async message => {
     // It's good practice to ignore other bots. This also makes your bot ignore itself
     // and not get into a spam loop (we call that "botception").
     if (message.author.bot) return;
-    
+
+    // Check to see if the begining of the message has any of the prefixes
+    let correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1
+
     // Also good practice to ignore any message that does not start with our prefix, 
     // which is set in the configuration file.
-    if (message.content.toLowerCase().indexOf(config.prefix) !== 0) return;
+    if (!correctPrefix) return;
 
     // Here we separate our "command" name, and our "arguments" for the command. 
     // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
     // command = say
     // args = ["Is", "this", "the", "real", "life?"]
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
+    console.log(command + " " + args.join(" "))
 
 
     switch (command) {
