@@ -62,7 +62,7 @@ client.on("message", async message => {
 
     case "im":
     case "i'm":
-        if (args[0].toLowerCase() === "back") {
+        if (args.join(" ").toLowerCase().startsWith("back")) {
             // When the user says a variation of "i'm back" mikuru gives a random response
             let temp = ["Welcome back~ ( ^ω^ )", "Okaerinasai~", "I missed you~"];
             message.channel.startTyping();
@@ -81,7 +81,7 @@ client.on("message", async message => {
             }, 2000);
         };
 
-        if (args[0].toLowerCase() === "gay") {
+        if (args.join(" ").toLowerCase().startsWith("gay")) {
             // When the user says a variation of "i'm gay" mikuru gives a random response
             let temp = ["I love you the way you are. ╰(´︶`)╯♡", "You'll always be the same to me~",
                 "That doesn't change my view of you."
@@ -101,7 +101,7 @@ client.on("message", async message => {
         break;
 
     case "how":
-         if (args.join(" ").toLowerCase() === "old are you") {
+         if (args.join(" ").toLowerCase().startsWith("old are you")) {
              // When the user asks "how old are you" mikuru gives a response
              message.channel.startTyping();
              setTimeout(() => {
@@ -110,7 +110,7 @@ client.on("message", async message => {
              }, 1200);
          };
 
-         if (args.join(" ").toLowerCase() === "are you") {
+         if (["are you", "are you doing"].includes(args.join(" ").toLowerCase())) {
              // When the user says a variation of "how are you" mikuru tells them how she's feeling
              let temp = [
                  "I'm good, thanks. （⌒▽⌒ゞ", "I'm doing pretty well today.", "Daijoubu.",
