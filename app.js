@@ -101,7 +101,7 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.reply(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 600);
+             }, 600)    ;
         break;
 
     case "how":
@@ -111,7 +111,7 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.channel.send("I'm 16.");
                  message.channel.stopTyping();
-             }, 1200);
+             }, 100);
          };
 
          if (["are you", "are you doing"].includes(args.join(" ").toLowerCase())) {
@@ -126,7 +126,7 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 3500);  
+             }, 3200);  
          };
 
          if (args.join(" ").toLowerCase() === "hot am i") {
@@ -136,7 +136,7 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 3500);
+             }, 3000);
          };
 
          if (args.join(" ").toLowerCase() === "straight are you") {
@@ -189,7 +189,7 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 3500);
+             }, 3525);
          };
 
          if (args.join(" ").toLowerCase() === "is your name") {
@@ -199,7 +199,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 3500);
+            }, 2500);
         };
 
         if (args.join(" ").toLowerCase() === "time is it") {
@@ -232,7 +232,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 3200);
+            }, 3300);
         };
 
         if (args.join(" ").toLowerCase() === "is your opinion on bitcoin") {
@@ -244,7 +244,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 2800);
+            }, 3000);
         };
 
         if (args.join(" ").toLowerCase() === "is your opinion on stevens iq") {
@@ -257,14 +257,14 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 2700);
+            }, 2900);
         };
          break;
 
     case "where":
         if (args.join(" ").toLowerCase() === "are you") {
             // When the user says a variation of "where are you" mikuru tells them where she lives
-            let temp = ["Nichō, Japan."];
+            let temp = ["Nichō, Japan.", "In the cloud.", "Wherever you want me to be."];
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
@@ -281,7 +281,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 3000);
+            }, 2800);
         };
 
         if (args.join(" ").toLowerCase() === "are your parents") {
@@ -301,7 +301,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 1200);
+            }, 1000);
         };
 
         if (args.join(" ").toLowerCase() === "is my kush") {
@@ -313,7 +313,7 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 3500);
+            }, 4000);
         };
          break;
     
