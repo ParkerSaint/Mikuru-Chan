@@ -92,7 +92,17 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.reply(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 600)    ;
+             }, 600);
+        break;
+
+    case "bye":
+        // When the user says a variation of bye Mikuru gives a random response
+        var temp = ["Awww, so soon already?", "Sayounara~", "Come back soon~"];    
+        message.channel.startTyping();
+             setTimeout(() => {
+                 message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 1000);
         break;
 
     case "how":
@@ -155,6 +165,28 @@ client.on("message", async message => {
          if (args.join(" ").toLowerCase() === "hate you") {
              // When the user says a variation of "i hate you" mikuru gives a random response
              var temp = ["(´；Д；`)", ".°(ಗдಗ。)°.", ";-;"];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 1000);
+         };
+        break;
+
+         if (args.join(" ").toLowerCase() === "gtg") {
+             // When the user says a variation of "i gtg" mikuru gives a random response
+             var temp = ["Itterashai~", ".°(ಗдಗ。)°.", "Don't leave me for too long."];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 1000);
+         };
+        break;
+
+         if (args.join(" ").toLowerCase() === "got to go") {
+             // When the user says a variation of "i got to go" mikuru gives a random response
+             var temp = ["Itterashai~", ".°(ಗдಗ。)°.", "Don't leave me for too long."];
              message.channel.startTyping();
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
