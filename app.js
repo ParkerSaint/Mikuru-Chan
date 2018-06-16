@@ -26,16 +26,20 @@ client.on("message", async message => {
     // and not get into a spam loop (we call that "botception").
     if (message.author.bot) return;
 
+    // Check to see if the begining of the message has any of the prefixes
+    let correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1
+
     // Also good practice to ignore any message that does not start with our prefix, 
     // which is set in the configuration file.
-    if (message.content.toLowerCase().indexOf(config.prefix) !== 0) return;
+    if (!correctPrefix) return;
 
     // Here we separate our "command" name, and our "arguments" for the command. 
     // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
     // command = say
     // args = ["Is", "this", "the", "real", "life?"]
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
+    console.log(command + " " + args.join(" "))
 
 
     switch (command) {
@@ -58,7 +62,7 @@ client.on("message", async message => {
 
     case "im":
     case "i'm":
-        if (args[0].toLowerCase() === "back") {
+        if (args.join(" ").toLowerCase().startsWith("back")) {
             // When the user says a variation of "i'm back" mikuru gives a random response
             let temp = ["Welcome back~ ( ^ω^ )", "Okaerinasai~", "I missed you~"];
             message.channel.startTyping();
@@ -77,7 +81,7 @@ client.on("message", async message => {
             }, 2000);
         };
 
-        if (args[0].toLowerCase() === "gay") {
+        if (args.join(" ").toLowerCase().startsWith("gay")) {
             // When the user says a variation of "i'm gay" mikuru gives a random response
             let temp = ["I love you the way you are. ╰(´︶`)╯♡", "You'll always be the same to me~",
                 "That doesn't change my view of you."
@@ -97,7 +101,7 @@ client.on("message", async message => {
         break;
 
     case "how":
-         if (args.join(" ").toLowerCase() === "old are you") {
+         if (args.join(" ").toLowerCase().startsWith("old are you")) {
              // When the user asks "how old are you" mikuru gives a response
              message.channel.startTyping();
              setTimeout(() => {
@@ -106,7 +110,7 @@ client.on("message", async message => {
              }, 1200);
          };
 
-         if (args.join(" ").toLowerCase() === "are you") {
+         if (["are you", "are you doing"].includes(args.join(" ").toLowerCase())) {
              // When the user says a variation of "how are you" mikuru tells them how she's feeling
              let temp = [
                  "I'm good, thanks. （⌒▽⌒ゞ", "I'm doing pretty well today.", "Daijoubu.",
@@ -196,12 +200,12 @@ client.on("message", async message => {
 
         if (args.join(" ").toLowerCase() === "time is it") {
             // When the user says a variation of "what time is it" mikuru tells them the current time of Japan
-            let temp = ["It's high noon. >_>"];
             message.channel.startTyping();
+            var d = new Date();
             setTimeout(() => {
-                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.send("It is " + d.getHours() + ":" + d.getMinutes());
                 message.channel.stopTyping();
-            }, 3500);
+            }, 1000);
         };
 
         if (args.join(" ").toLowerCase() === "is your favorite dbangz hit") {
