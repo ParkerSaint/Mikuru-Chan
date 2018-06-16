@@ -111,7 +111,7 @@ client.on("message", async message => {
              let temp = [
                  "I'm good, thanks. （⌒▽⌒ゞ", "I'm doing pretty well today.", "Daijoubu.",
                  "I'm feeling a bit better than usual. ໒( ͡ᵔ ▾ ͡ᵔ )७", "I'm good, how are you? （‐＾▽＾‐）",
-                 "I'm good, I guess. (*´-｀*)", "I'm feeling under the weather.", "I'm really angry right now. ( ╬◣ 益◢)",
+                 "I'm good, I guess. (^´-｀^)", "I'm feeling under the weather.", "I'm really angry right now. ( ╬◣ 益◢)",
                  "I'm not fine at all. 。・°°・(＞_＜)・°°・。"
              ];
              message.channel.startTyping();
@@ -153,7 +153,7 @@ client.on("message", async message => {
              // When the user says a variation of "are you doing" mikuru gives a random response
              let temp = [
                  "I'm knitting a scarf for myself right now. (๑•̀ㅂ•́)و", "Talking to you, dummy~ (￣ω￣)",
-                 "I'm watching Kokoro Connect.", "I'm watching Haganai.", "I'm watching SAO. I know, it's bad. ¯\_(ツ)_/¯",
+                 "I'm watching Kokoro Connect.", "I'm watching Haganai.", "I'm watching SAO. I know, it's bad. (ツ)_/¯",
                  "I'm watching Darling in the Franxx.", "I'm watching Angel Beats. ( ≧Д≦)",
                  "I'm watching Blade Dance~", "I'm watching the Asterisk War.", "I'm listening to some music.", 
                  "I'm reading a book~", "I ***was*** taking a nap. (；￣Д￣）", "I'm doing homework.",
