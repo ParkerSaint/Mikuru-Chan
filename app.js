@@ -37,7 +37,7 @@ client.on("message", async message => {
     // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
     // command = say
     // args = ["Is", "this", "the", "real", "life?"]
-    const args = message.content.slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
+    const args = message.content.replace(/[,.!?]/gi, '').slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     console.log(command + " " + args.join(" "))
 
