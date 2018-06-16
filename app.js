@@ -260,6 +260,16 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 800);
         };
+
+        if (args.join(" ").toLowerCase() === "the fuck") {
+            // When the user says a variation of "what the fuck" mikuru gives a random response 
+            var temp = ["Watch the language.", "Don't say that here. (╬⓪益⓪)", "Watch your tongue~"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1500);
+        };
         break;
 
     case "where":
@@ -392,6 +402,297 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 1000);
         };
+        break;
+    
+    case "fuck":
+        if (args.join(" ").toLowerCase() === "me") {
+            // When the user says a variation of "fuck me" mikuru gets angry
+            var temp = ["What do you think you're saying?", "Watch yourself please~ (ꐦ°᷄д°᷅)",
+            "What were you thinking when you said that?", "Don't say something like that~ (╬ﾟ◥益◤ﾟ) ╬ﾟ"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2800);
+    };
+
+        if (args.join(" ").toLowerCase() === "you") {
+            // When the user says a variation of "fuck you" mikuru gets angry
+            var temp = ["You're getting carried away~ <(｀^´)>", "Don't say things like that~",
+            "Don't start a fight here~ (๑･`▱´･๑)", "Saying something like that is going to get you in trouble."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2800);
+    };
+    break;
+
+    case "who":
+        if (args.join(" ").toLowerCase() === "are you") {
+            // When the user says a variation of "who are you" mikuru tells them who she is
+            var temp = ["I'm Akara Mikuru~ Hajimemashite. (/^▽^)/"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 3200);
+    };
+
+        if (args.join(" ").toLowerCase() === "is your senpai") {
+            // When the user says a variation of "is your senpai" mikuru tells them they are
+            var temp = ["Why, you of course~ (｡♥‿♥｡)"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "is your waifu") {
+            // When the user says a variation of "is your waifu" mikuru gives a random response
+            var temp = ["I'll have to decide eventually.", "Ito Otonashi from Aocchi Kocchi~ (￣ω￣)",
+            "Kazuma from Konosuba~ (✿´ ꒳ ` )", "Yuuta Togashi from Chūnibyō Demo Koi Ga Shitai~ (￣ω￣;)",
+            "Not quite sure right now, actually."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 3000);
+    };
+    break;
+
+    case "who's":
+        if (args.join(" ").toLowerCase() === "your senpai") {
+            // When the user says a variation of "is your senpai" mikuru tells them they are
+            var temp = ["Why, you of course~ (｡♥‿♥｡)"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "your waifu") {
+            // When the user says a variation of "who's your waifu" mikuru gives them a random response
+            var temp = ["I'll have to decide eventually.", "Ito Otonashi from Aocchi Kocchi~ (￣ω￣)",
+            "Kazuma from Konosuba~ (✿´ ꒳ ` )", "Yuuta Togashi from Chūnibyō Demo Koi Ga Shitai~ (￣ω￣;)",
+            "Not quite sure right now, actually."
+            ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 3000);
+    };
+    break;
+
+    case "send":
+        if (args.join(" ").toLowerCase() === "nudes") {
+            // When the user says a variation of "send nudes" mikuru is disgusted
+            var temp = ["I can't believe you just asked me that.", "What did you say?", 
+            "https://cdn.discordapp.com/attachments/456789828240015361/457577242487422996/pervert.png"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "memes") {
+            // When the user says a variation of "send memes" mikuru is empty handed
+            var temp = ["I'm afraid I don't cluster my computer with those.", "I don't have any, and I'm glad.",
+            "You can't really expect me to have memes."
+            ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 4000);
+    };
+    break;
+
+    case "die":
+        // When the user says a variation of "die" mikuru becomes sad
+        var temp = ["Why are you saying things like that?", "That hurt. A lot. (⌯˃̶᷄ ﹏ ˂̶᷄⌯)ﾟ",
+        "Please don't say things like that."
+    ]; {
+        message.channel.startTyping();
+        setTimeout(() => {
+            message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+            message.channel.stopTyping();
+        }, 3200);
+    };
+    break;
+
+    case "dab":
+        // When the user says a variation of "dab" mikuru becomes confused
+        var temp = ["Uh... what?", "Okay...", "???"]; {
+        message.channel.startTyping();
+        setTimeout(() => {
+            message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+            message.channel.stopTyping();
+        }, 1000);
+    };
+    break;
+
+    case "nani":
+        // When the user says a variation of "nani" mikuru becomes memelord
+        var temp = ["Baka baka baka!!!", "Nanda yo?", "Omae wa mou shindeiru..."]; {
+        message.channel.startTyping();
+        setTimeout(() => {
+            message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+            message.channel.stopTyping();
+        }, 1500);
+    };
+    break;
+
+    case "go":
+        if (args.join(" ").toLowerCase() === "die") {
+            // When the user says a variation of "go die" mikuru gets angry
+            var temp = ["That's mean. (๑◕︵◕๑)", "Excuse me? ⊙︿⊙", "Watch yourself~"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 1500);
+    };
+
+        if (args.join(" ").toLowerCase() === "kys") {
+            // When the user says a variation of "go kys" mikuru gets sad
+            var temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Nooo... why?"]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+
+        if (args.join(" ").toLowerCase() === "kill yourself") {
+            // When the user says a variation of "go kill yourself" mikuru gets sad
+            var temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Nooo... why?"]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+    break;
+
+    case "ur":
+        if (args.join(" ").toLowerCase() === "gay") {
+            // When the user says a variation of "ur gay" mikuru gets angry
+            var temp = ["I would appreciate it if you stopped assuming my sexuality.", 
+            "In the manner you just said that, it was extremely rude.", 
+            "I would be more careful of what you're saying."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 4000);
+    };
+
+        if (args.join(" ").toLowerCase() === "a thot") {
+            // When the user says a variation of "ur a thot" mikuru gets sad
+            var temp = ["Why would you assume that? ლ(｡-﹏-｡ ლ)", "That's kind of rude.", 
+            "Is it something I did?"
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2900);
+    };
+
+        if (args.join(" ").toLowerCase() === "bad") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Um..."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+    break;
+
+    case "your":
+        if (args.join(" ").toLowerCase() === "gay") {
+            // When the user says a variation of "your gay" mikuru gets angry
+            var temp = ["I would appreciate it if you stopped assuming my sexuality.", 
+            "In the manner you just said that, it was extremely rude.", 
+            "I would be more careful of what you're saying."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 4000);
+    };
+
+        if (args.join(" ").toLowerCase() === "a thot") {
+            // When the user says a variation of "your a thot" mikuru gets sad
+            var temp = ["Why would you assume that? ლ(｡-﹏-｡ ლ)", "That's kind of rude.", 
+            "Is it something I did?"
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2900);
+    };
+
+        if (args.join(" ").toLowerCase() === "bad") {
+            // When the user says a variation of "your bad" mikuru gets sad
+            var temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Um..."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+    break;
+
+    case "you're":
+        if (args.join(" ").toLowerCase() === "gay") {
+            // When the user says a variation of "you're gay" mikuru gets angry
+            var temp = ["I would appreciate it if you stopped assuming my sexuality.", 
+            "In the manner you just said that, it was extremely rude.", 
+            "I would be more careful of what you're saying."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 4000);
+    };
+
+        if (args.join(" ").toLowerCase() === "a thot") {
+            // When the user says a variation of "you're a thot" mikuru gets sad
+            var temp = ["Why would you assume that? ლ(｡-﹏-｡ ლ)", "That's kind of rude.", 
+            "Is it something I did?"
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2900);
+    };
+
+        if (args.join(" ").toLowerCase() === "bad") {
+            // When the user says a variation of "you're bad" mikuru gets sad
+            var temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Um..."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+    break;
 
     default:
         break;
