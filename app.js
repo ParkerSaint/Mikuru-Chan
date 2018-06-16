@@ -100,7 +100,7 @@ client.on("message", async message => {
         var temp = ["Awww, so soon already?", "Sayounara~", "Come back soon~"];    
         message.channel.startTyping();
              setTimeout(() => {
-                 message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
              }, 1000);
         break;
