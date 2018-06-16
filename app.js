@@ -25,7 +25,7 @@ client.on("message", async message => {
     // It's good practice to ignore other bots. This also makes your bot ignore itself
     // and not get into a spam loop (we call that "botception").
     if (message.author.bot) return;
-
+    
     // Also good practice to ignore any message that does not start with our prefix, 
     // which is set in the configuration file.
     if (message.content.toLowerCase().indexOf(config.prefix) !== 0) return;
@@ -196,12 +196,12 @@ client.on("message", async message => {
 
         if (args.join(" ").toLowerCase() === "time is it") {
             // When the user says a variation of "what time is it" mikuru tells them the current time of Japan
-            let temp = ["It's high noon. >_>"];
             message.channel.startTyping();
+            var d = new Date();
             setTimeout(() => {
-                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.send("It is " + d.getHours() + ":" + d.getMinutes());
                 message.channel.stopTyping();
-            }, 3500);
+            }, 1000);
         };
 
         if (args.join(" ").toLowerCase() === "is your favorite dbangz hit") {
