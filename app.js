@@ -17,6 +17,7 @@ client.on("ready", () => {
     client.user.setActivity(`with the lolis :3`);
 });
 
+const cuss = ["fuck", "shit", "cunt"]
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
 
@@ -33,6 +34,26 @@ client.on("message", async message => {
     const args = message.content.replace(/[,.!?]/gi, '').slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     console.log(command + " " + args.join(" "));
+
+    if (cuss.includes(command)) {
+        message.channel.send("", {
+            file: "http://up.parkersaint.moe/f/Q" + ".jpg"
+        });
+        console.log("**SORRY SIR**");
+        return;
+    };
+
+    for(var i = 0; i < args.length; i++) {
+        for(var j = 0; j < cuss.length; j++) {
+            if (args[i] === cuss[j]) {
+                message.channel.send("", {
+                    file: "http://up.parkersaint.moe/f/Q" + ".jpg"
+                });
+                console.log("**SORRY SIR**");
+                return;
+            };
+        };
+    };
 
 
     switch (command) {
@@ -433,32 +454,6 @@ client.on("message", async message => {
             }, 1000);
         };
         break;
-    
-    case "fuck":
-        if (args.join(" ").toLowerCase() === "me") {
-            // When the user says a variation of "fuck me" mikuru gets angry
-            var temp = ["What do you think you're saying?", "Watch yourself please~ (ꐦ°᷄д°᷅)",
-            "What were you thinking when you said that?", "Don't say something like that~ (╬ﾟ◥益◤ﾟ) ╬ﾟ"
-        ];
-            message.channel.startTyping();
-            setTimeout(() => {
-                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
-                message.channel.stopTyping();
-        }, 2800);
-    };
-
-        if (args.join(" ").toLowerCase() === "you") {
-            // When the user says a variation of "fuck you" mikuru gets angry
-            var temp = ["You're getting carried away~ <(｀^´)>", "Don't say things like that~",
-            "Don't start a fight here~ (๑･`▱´･๑)", "Saying something like that is going to get you in trouble."
-        ];
-            message.channel.startTyping();
-            setTimeout(() => {
-                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
-                message.channel.stopTyping();
-        }, 2800);
-    };
-    break;
 
     case "who":
         if (args.join(" ").toLowerCase() === "are you") {
