@@ -171,7 +171,6 @@ client.on("message", async message => {
                  message.channel.stopTyping();
              }, 1000);
          };
-        break;
 
          if (args.join(" ").toLowerCase() === "gtg") {
              // When the user says a variation of "i gtg" mikuru gives a random response
@@ -182,7 +181,6 @@ client.on("message", async message => {
                  message.channel.stopTyping();
              }, 1000);
          };
-        break;
 
          if (args.join(" ").toLowerCase() === "got to go") {
              // When the user says a variation of "i got to go" mikuru gives a random response
