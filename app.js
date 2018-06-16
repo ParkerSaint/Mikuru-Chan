@@ -259,6 +259,16 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 2900);
         };
+
+        if (args.join(" ").toLowerCase() === "is your favorite fortnite emote") {
+            // When the user says a variation of "what is your favorite fortnite emote" mikuru gives a random response 
+            let temp = ["Fresh.", "Orange Justice.", "Jubilation."];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 800);
+        };
          break;
 
     case "where":
@@ -337,7 +347,41 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 2500);
         };
-          break;
+
+        if (args.join(" ").toLowerCase() === "you like cats") {
+            // When the user says a variation of "do you like cats" mikuru only loves her tortoise im sorry
+            let temp = ["Not sure, I'm allergic to them.", "I already have Bartholomew~ 乂❤‿❤乂", 
+            "They're okay, I guess."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2800);
+        };
+
+        if (args.join(" ").toLowerCase() === "you like dogs") {
+            // When the user says a variation of "do you like dogs" mikuru only loves her tortoise im sorry
+            let temp = ["I got bit by one, but they're okay.", "I already have Bartholomew~ 乂❤‿❤乂", 
+            "Some of the puppies are super cute~(●♡∀♡)"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2800);
+        };
+        
+    case "kys":
+        // When the user says a variation of "kys" mikuru is sad
+        let temp = ["But why? ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Nooo... why?"]; {
+        message.channel.startTyping();
+        setTimeout(() => {
+            message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+            message.channel.stopTyping();
+        }, 1000);
+    };
+     break;
 
     default:
         break;
