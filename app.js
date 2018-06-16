@@ -59,7 +59,7 @@ client.on("message", async message => {
     case "im":
     case "i'm":
         if (args[0].toLowerCase() === "back") {
-            // When the user says a variation of "I'm back" mikuru gives a random response
+            // When the user says a variation of "i'm back" mikuru gives a random response
             let temp = ["Welcome back~ ( ^ω^ )", "Okaerinasai~", "I missed you~"];
             message.channel.startTyping();
             setTimeout(() => {
@@ -68,7 +68,7 @@ client.on("message", async message => {
             }, 2000);
         };
         if (args.join(" ").toLowerCase() === "not feeling good") {
-            // When the user says a variation of "I'm back" mikuru gives a random response
+            // When the user says a variation of "i'm not feeling good" mikuru gives a random response
             let temp = ["Will you be fine?", "I'll nurse you back to health.", "Oh, that's no good."];
             message.channel.startTyping();
             setTimeout(() => {
@@ -78,7 +78,7 @@ client.on("message", async message => {
         };
 
         if (args[0].toLowerCase() === "gay") {
-            // When the user says a variation of "I'm gay" mikuru gives a random response
+            // When the user says a variation of "i'm gay" mikuru gives a random response
             let temp = ["I love you the way you are. ╰(´︶`)╯♡", "You'll always be the same to me~",
                 "That doesn't change my view of you."
             ];
@@ -92,7 +92,7 @@ client.on("message", async message => {
 
     case "hello":
         // When the user says a variation of hello Mikuru gives a random response
-        let temp = ["Hiya~", "Hello~", "Hajimemashite~"]; // These are the three time of day based responses.   
+        let temp = ["Hiya~", "Hello~", "Hajimemashite~"];    
         message.reply(temp[Math.floor(Math.random() * temp.length)]);
         break;
 
@@ -107,7 +107,7 @@ client.on("message", async message => {
          };
 
          if (args.join(" ").toLowerCase() === "are you") {
-             // When the user says a variation of "love you" mikuru gives a random response
+             // When the user says a variation of "how are you" mikuru tells them how she's feeling
              let temp = [
                  "I'm good, thanks. （⌒▽⌒ゞ", "I'm doing pretty well today.", "Daijoubu.",
                  "I'm feeling a bit better than usual. ໒( ͡ᵔ ▾ ͡ᵔ )७", "I'm good, how are you? （‐＾▽＾‐）",
@@ -122,7 +122,7 @@ client.on("message", async message => {
             
          };
          if (args.join(" ").toLowerCase() === "hot am i") {
-             // When the user says a variation of "love you" mikuru gives a random response
+             // When the user says a variation of "how hot am i" mikuru tells them they are hot
              let temp = ["I would say pretty hot. ♥(ˆ⌣ˆԅ)", "You're hot, I guess.", "Is it me or is it hot in here?"];
              message.channel.startTyping();
              setTimeout(() => {
@@ -134,7 +134,7 @@ client.on("message", async message => {
 
     case "i":
          if (args.join(" ").toLowerCase() === "love you") {
-             // When the user says a variation of "love you" mikuru gives a random response
+             // When the user says a variation of "i love you" mikuru gives a random response
              let temp = ["Awwww, thank you~", "I love you too~", "Watashi mo kimi o aishitemasu~"];
              message.channel.startTyping();
              setTimeout(() => {
@@ -144,7 +144,7 @@ client.on("message", async message => {
          };
 
          if (args.join(" ").toLowerCase() === "hate you") {
-             // When the user says a variation of "hate you" mikuru gives a random response
+             // When the user says a variation of "i hate you" mikuru gives a random response
              let temp = ["(´；Д；`)", ".°(ಗдಗ。)°.", ";-;"];
              message.channel.startTyping();
              setTimeout(() => {
@@ -156,7 +156,7 @@ client.on("message", async message => {
 
     case "what":
          if (args.join(" ").toLowerCase() === "are you doing") {
-             // When the user says a variation of "are you doing" mikuru gives a random response
+             // When the user says a variation of "what are you doing" mikuru gives a random response
              let temp = [
                  "I'm knitting a scarf for myself right now. (๑•̀ㅂ•́)و", "Talking to you, dummy~ (￣ω￣)",
                  "I'm watching Kokoro Connect.", "I'm watching Haganai.", "I'm watching SAO. I know, it's bad. (ツ)_/¯",
@@ -175,7 +175,7 @@ client.on("message", async message => {
          };
 
          if (args.join(" ").toLowerCase() === "is your name") {
-            // When the user says a variation of "is your name" mikuru tells them her name
+            // When the user says a variation of "what is your name" mikuru tells them her name
             let temp = ["My full name is Akara Mikuru~"];
             message.channel.startTyping();
             setTimeout(() => {
@@ -185,7 +185,7 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "time is it") {
-            // When the user says a variation of "time is it" mikuru tells them the current time of Japan
+            // When the user says a variation of "what time is it" mikuru tells them the current time of Japan
             let temp = ["It's high noon. >_>"];
             message.channel.startTyping();
             setTimeout(() => {
@@ -197,7 +197,7 @@ client.on("message", async message => {
 
     case "where":
         if (args.join(" ").toLowerCase() === "are you") {
-            // When the user says a variation of "is your name" mikuru tells them her name
+            // When the user says a variation of "where are you" mikuru tells them where she lives
             let temp = ["Nichō, Japan."];
             message.channel.startTyping();
             setTimeout(() => {
@@ -207,7 +207,7 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "is my head") {
-            // When the user says a variation of "is your name" mikuru tells them her name
+            // When the user says a variation of " where is my head" mikuru fails to understand the joke
             let temp = ["Oh, what happened to it? ｢(ﾟ<ﾟ)ﾞ??", "What? Is that a joke? /(@ﾟﾍﾟ@)", 
             "Uh, it's on your neck. (￣(エ)￣)ゞ"
         ]; 
@@ -219,17 +219,17 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "are your parents") {
-            // When the user says a variation of "is your name" mikuru tells them her name
-            let temp = ["I was conceived in Parker's thoughts~ ♡(ŐωŐ人)"]; 
+            // When the user says a variation of "where are your parents" mikuru tells them how she was created
+            let temp = ["I was conceived in Steven's thoughts and made by Parker, I don't have parents~ ♡(ŐωŐ人)"]; 
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 3000);
+            }, 4200);
         };
 
         if (args.join(" ").toLowerCase() === "is the kush") {
-            // When the user says a variation of "is your name" mikuru tells them her name
+            // When the user says a variation of "where is my kush" mikuru avoids answering the question
             let temp = ["Um...", "Uh...", "I'm sorry?"]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -239,7 +239,7 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "is my kush") {
-            // When the user says a variation of "is your name" mikuru tells them her name
+            // When the user says a variation of "where is my kush" mikuru tells them to change their ways
             let temp = ["Why would I know where you keep your... drugs?", 
             "You really should stop using those kind of things.", "That's not healthy, you know."
         ]; 
@@ -250,6 +250,28 @@ client.on("message", async message => {
             }, 3500);
         };
          break;
+    
+    case "do":
+         if (args.join(" ").toLowerCase() === "you love me") {
+             // When the user says a variation of "do you love me" mikuru tells them she does
+             let temp = ["Of course I do. (♥ω♥*)", "I always will~ ໒( ♥ ◡ ♥ )७", "Why wouldn't I? （^´▽｀^）"];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 2700);
+         };
+
+         if (args.join(" ").toLowerCase() === "you hate me") {
+            // When the user says a variation of "do you hate me" mikuru tells them she doesn't
+            let temp = ["No, of course not~ ｢(ﾟﾍﾟ)", "Why do you think that? ｢(ﾟ<ﾟ)ﾞ??", "Of course I don't~ Σ(・Д・)!?"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2500);
+        };
+          break;
 
     default:
         break;
