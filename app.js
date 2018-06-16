@@ -118,9 +118,9 @@ client.on("message", async message => {
              setTimeout(() => {
                  message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                  message.channel.stopTyping();
-             }, 3500);
-            
+             }, 3500);  
          };
+
          if (args.join(" ").toLowerCase() === "hot am i") {
              // When the user says a variation of "how hot am i" mikuru tells them they are hot
              let temp = ["I would say pretty hot. ♥(ˆ⌣ˆԅ)", "You're hot, I guess.", "Is it me or is it hot in here?"];
@@ -130,6 +130,16 @@ client.on("message", async message => {
                  message.channel.stopTyping();
              }, 3500);
          };
+
+         if (args.join(" ").toLowerCase() === "straight are you") {
+            // When the user says a variation of "how straight are you" mikuru gives a random response
+            let temp = ["I'm pretty straight.", "I'm not quite sure.", "That's a weird question to ask. >_<"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2300);
+        };
          break;
 
     case "i":
@@ -192,6 +202,54 @@ client.on("message", async message => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
             }, 3500);
+        };
+
+        if (args.join(" ").toLowerCase() === "is your favorite dbangz hit") {
+            // When the user says a variation of "what is your favorite dbangz hit" 
+            // mikuru can't decide
+            let temp = ["Either Way Back When or I Love You.", "But I'm not Mexican~"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+        };
+
+        if (args.join(" ").toLowerCase() === "does lmao stand for") {
+            // When the user says a variation of "what does lmao stand for" mikuru will tell or not tell them
+            let temp = ["Fine... it means laughing my ass off.", "Uh... I think I'll pass on that.", 
+            "I'd much rather not say."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3200);
+        };
+
+        if (args.join(" ").toLowerCase() === "is your opinion on bitcoin") {
+            // When the user says a variation of "what does lmao stand for" mikuru will tell or not tell them
+            let temp = ["Well, I'm not quite sure.", "I don't know, a bad investment?", 
+            "I don't really care about those things."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2800);
+        };
+
+        if (args.join(" ").toLowerCase() === "is your opinion on stevens iq") {
+            // When the user says a variation of "what is your favorite dbangz hit" 
+            // mikuru can't decide
+            let temp = ["Err... that's a touchy subject.", "It's a low budget ice cube.", 
+            "What kind of question is that?"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 2700);
         };
          break;
 
