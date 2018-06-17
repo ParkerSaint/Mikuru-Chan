@@ -302,7 +302,7 @@ client.on("message", async message => {
 
         if (args.join(" ").toLowerCase() === "does lmao stand for") {
             // When the user says a variation of "what does lmao stand for" mikuru will tell or not tell them
-            var temp = ["I would google it instead of asking me.", "Uh... I think I'll pass on that.", 
+            var temp = ["I would Google it instead of asking me.", "Uh... I think I'll pass on that.", 
             "I'd much rather not say."
         ];
             message.channel.startTyping();
