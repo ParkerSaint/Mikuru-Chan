@@ -745,6 +745,19 @@ client.on("message", async message => {
                 message.channel.stopTyping();
         }, 4000);
     };
+
+        if (args.join(" ").toLowerCase() === "are you so bad") {
+            // When the user says a variation of "why are you so bad" mikuru asks them why they think that
+            var temp = ["Not quite sure where you are getting that from.", 
+            "That was pretty provoking of you.", 
+            "That's... not very nice of you."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 3000);
+    };
     break;
 
     default:
