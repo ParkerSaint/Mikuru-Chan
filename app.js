@@ -120,6 +120,7 @@ client.on("message", async message => {
         break;
 
     case "hello":
+    case "hi":
         // When the user says a variation of hello Mikuru gives a random response
         var temp = ["Hiya~", "Hello~", "Hajimemashite~"];    
         message.channel.startTyping();
@@ -711,6 +712,26 @@ client.on("message", async message => {
             }, 1000);
     };
 
+        if (args.join(" ").toLowerCase() === "trash") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+
+        if (args.join(" ").toLowerCase() === "thicc") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+    };
+
         if (["mom gay", "mom gay lol"].includes(args.join(" ").toLowerCase())) {
             // When the user says a variation of "your mom gay" mikuru gets confused
             var temp = ["Funny, cause I don't have a mom.", "I don't really have parents.", 
@@ -760,6 +781,26 @@ client.on("message", async message => {
             }, 1000);
     };
 
+        if (args.join(" ").toLowerCase() === "trash") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+
+        if (args.join(" ").toLowerCase() === "thicc") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+    };
+
         if (["mom gay", "mom gay lol"].includes(args.join(" ").toLowerCase())) {
             // When the user says a variation of "your mom gay" mikuru gets confused
             var temp = ["Funny, cause I don't have a mom.", "I don't really have parents.", 
@@ -807,6 +848,26 @@ client.on("message", async message => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
             }, 1000);
+    };
+
+    if (args.join(" ").toLowerCase() === "trash") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 1000);
+    };
+
+        if (args.join(" ").toLowerCase() === "thicc") {
+            // When the user says a variation of "ur bad" mikuru gets sad
+            var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
     };
     break;
 
