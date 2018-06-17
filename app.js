@@ -105,6 +105,18 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 3000);
         };
+
+        if (args.join(" ").toLowerCase().startsWith("alone")) {
+            // When the user says a variation of "i'm alone" mikuru gives a random response
+            var temp = ["I'm here for you. ╰(´︶`)╯♡", "Don't say that when I'm here~ (´д｀、)",
+                "I'll always be here for you. Σ(ﾟдﾟ；)"
+            ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.reply(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+        };
         break;
 
     case "hello":
