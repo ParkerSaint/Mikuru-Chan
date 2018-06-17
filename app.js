@@ -747,6 +747,17 @@ client.on("message", async message => {
     };
     break;
 
+    case "sample": 
+        message.channel.send("response 1");
+        const filter = m => {if (!m.author.bot && m.author === message.author) {return true;}};
+        message.channel.awaitMessages(filter, {
+                max: 1,
+                time: 5000,
+                errors: ['time']
+            })
+            .then(collected => message.channel.send("response 2"))
+            .catch(collected => message.channel.send("no answer in time"));
+
     default:
         break;
     };  
