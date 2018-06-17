@@ -129,6 +129,16 @@ client.on("message", async message => {
              }, 600);
         break;
 
+    case "shut up":
+        // When the user says a variation of hello Mikuru gives a random response
+        var temp = ["What? Why?", "That's mean. (⌯˃̶᷄ ﹏ ˂̶᷄⌯)", "I didn't realize I talked that much. (︶︹︺)"];    
+        message.channel.startTyping();
+             setTimeout(() => {
+                 message.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 3200);
+        break;
+
     case "bye":
         // When the user says a variation of bye Mikuru gives a random response
         var temp = ["Awww, so soon already?", "Sayounara~", "Come back soon~"];    
