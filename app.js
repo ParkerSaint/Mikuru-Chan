@@ -658,6 +658,18 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 1000);
     };
+
+        if (["mom gay", "mom gay lol"].includes(args.join(" ").toLowerCase())) {
+            // When the user says a variation of "your mom gay" mikuru gets confused
+            var temp = ["Funny, cause I don't have a mom.", "I don't really have parents.", 
+            "Okay... that's not weird at all."
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
+    };
     break;
 
     case "your":
@@ -694,6 +706,18 @@ client.on("message", async message => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
             }, 1000);
+    };
+
+        if (["mom gay", "mom gay lol"].includes(args.join(" ").toLowerCase())) {
+            // When the user says a variation of "your mom gay" mikuru gets confused
+            var temp = ["Funny, cause I don't have a mom.", "I don't really have parents.", 
+            "Okay... that's not weird at all."
+        ]; 
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3000);
     };
     break;
 
