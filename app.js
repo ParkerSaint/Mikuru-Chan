@@ -82,16 +82,16 @@ client.on("message", async message => {
             setTimeout(() => {
                 message.reply(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 2000);
+            }, 1500);
         };
         if (args.join(" ").toLowerCase() === "not feeling good") {
             // When the user says a variation of "i'm not feeling good" mikuru gives a random response
-            var temp = ["Will you be fine?", "I'll nurse you back to health.", "Oh, that's no good."];
+            var temp = ["Will you be fine?", "Get some rest, okay?", "Oh, that's no good. ( ꒪Д꒪)ノ"];
             message.channel.startTyping();
             setTimeout(() => {
                 message.reply(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
-            }, 2000);
+            }, 3000);
         };
 
         if (args.join(" ").toLowerCase().startsWith("gay")) {
@@ -132,7 +132,7 @@ client.on("message", async message => {
              // When the user asks "how old are you" mikuru gives a response
              message.channel.startTyping();
              setTimeout(() => {
-                 message.channel.send("I'm 16. How about you?");
+                 message.channel.send("I'm 16.");
                  message.channel.stopTyping();
              }, 100);
          };
