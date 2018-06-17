@@ -132,7 +132,7 @@ client.on("message", async message => {
              // When the user asks "how old are you" mikuru gives a response
              message.channel.startTyping();
              setTimeout(() => {
-                 message.channel.send("I'm 16.");
+                 message.channel.send("I'm 16. How about you?");
                  message.channel.stopTyping();
              }, 100);
          };
@@ -164,7 +164,9 @@ client.on("message", async message => {
 
          if (args.join(" ").toLowerCase() === "straight are you") {
             // When the user says a variation of "how straight are you" mikuru gives a random response
-            var temp = ["I'm pretty straight.", "I'm not quite sure.", "That's a weird question to ask. >_<"];
+            var temp = ["That's a pretty rude question to ask.", "I'd prefer not to answer that.", 
+            "That's a weird question to ask. >_<"
+        ];
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
