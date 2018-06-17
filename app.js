@@ -258,7 +258,7 @@ client.on("message", async message => {
         if (args.join(" ").toLowerCase() === "is your favorite dbangz hit") {
             // When the user says a variation of "what is your favorite dbangz hit" 
             // mikuru can't decide
-            var temp = ["Either Way Back When or I Love You.", "But I'm not Mexican~"];
+            var temp = ["Either Way Back When or I Love You~ (＾▽＾)", "Not quite sure right now."];
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
@@ -268,7 +268,7 @@ client.on("message", async message => {
 
         if (args.join(" ").toLowerCase() === "does lmao stand for") {
             // When the user says a variation of "what does lmao stand for" mikuru will tell or not tell them
-            var temp = ["Fine... it means laughing my ass off.", "Uh... I think I'll pass on that.", 
+            var temp = ["I would google it instead of asking me.", "Uh... I think I'll pass on that.", 
             "I'd much rather not say."
         ];
             message.channel.startTyping();
@@ -279,8 +279,8 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "is your opinion on bitcoin") {
-            // When the user says a variation of "what does lmao stand for" mikuru will tell or not tell them
-            var temp = ["Well, I'm not quite sure.", "I don't know, a bad investment?", 
+            // When the user says a variation of "is your opinion on bitcoin" mikuru is not sure.
+            var temp = ["Well, I'm not quite sure.", "I don't know, I don't care about those things.", 
             "I don't really care about those things."
         ];
             message.channel.startTyping();
@@ -291,8 +291,8 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "is your opinion on stevens iq") {
-            // When the user says a variation of "what is your favorite dbangz hit" 
-            // mikuru can't decide
+            // When the user says a variation of "is your opinion on stevens iq" 
+            // mikuru either answers or doesnt
             var temp = ["Err... that's a touchy subject.", "It's a low budget ice cube.", 
             "What kind of question is that?"
         ];
@@ -305,7 +305,7 @@ client.on("message", async message => {
 
         if (args.join(" ").toLowerCase() === "is your favorite fortnite emote") {
             // When the user says a variation of "what is your favorite fortnite emote" mikuru gives a random response 
-            var temp = ["Fresh.", "Orange Justice.", "Jubilation."];
+            var temp = ["Fresh. ໒( ͡ᵔ ▾ ͡ᵔ )७", "Orange Justice. (=^▽^=)", "Jubilation. o(≧∇≦o)"];
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
@@ -317,7 +317,7 @@ client.on("message", async message => {
     case "where":
         if (args.join(" ").toLowerCase() === "are you") {
             // When the user says a variation of "where are you" mikuru tells them where she lives
-            var temp = ["Nichō, Japan.", "In the cloud.", "Wherever you want me to be."];
+            var temp = ["Nichō, Japan.", "In the clouds.", "Wherever you want me to be."];
             message.channel.startTyping();
             setTimeout(() => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
