@@ -719,6 +719,43 @@ client.on("message", async message => {
     };
     break;
 
+    case "get":
+        if (args.join(" ").toLowerCase() === "out") {
+            // When the user says a variation of "get out" mikuru gets confused
+            var temp = ["Why?", "What did I do?", "Kind of rude..."];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 1500);
+    };
+    break;
+
+    case "why":
+        if (args.join(" ").toLowerCase() === "are you so gay") {
+            // When the user says a variation of "why are you so gay" mikuru asks them why they think that
+            var temp = ["Why do you think that?", "Did I do something?", "Um... why are you asking that?"];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "are you so stupid") {
+            // When the user says a variation of "why are you so stupid" mikuru asks them why they think that
+            var temp = ["Unless your name is Google, stop acting like you know everything.", 
+            "I can't believe you just said that so blatantly.", 
+            "You're going to get in trouble if you keep talking like that."
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 4000);
+    };
+    break;
+
     default:
         break;
     };
