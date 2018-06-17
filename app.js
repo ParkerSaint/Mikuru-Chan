@@ -883,6 +883,54 @@ client.on("message", async message => {
     };
     break;
 
+    case "has":
+        if (args.join(" ").toLowerCase() === "no head") {
+            // When the user says a variation of "has no head" mikuru gets confused
+            var temp = ["Um... okay.", "It's still here?", "Sure..."];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 1500);
+    };
+
+        if (args.join(" ").toLowerCase() === "the big homosexual") {
+            // When the user says a variation of "has the big homosexual" mikuru gets confused/offended
+            var temp = ["What? Okay?", "I wouldn't say things like that.", "Yeah... Okay...",
+            "Yeah, I totally understand you.", "You feeling alright?"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "the big gae") {
+            // When the user says a variation of "has the big gae" mikuru gets confused/offended
+            var temp = ["What? Okay?", "I wouldn't say things like that.", "Yeah... Okay...", 
+            "Yeah, I totally understand you.", "You feeling alright?"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+
+        if (args.join(" ").toLowerCase() === "the big gay") {
+            // When the user says a variation of "has the big gay" mikuru gets confused/offended
+            var temp = ["What? Okay?", "I wouldn't say things like that.", "Yeah... Okay...", 
+            "Yeah, I totally understand you.", "You feeling alright?"
+        ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+        }, 2000);
+    };
+    break;
+
     case "why":
         if (args.join(" ").toLowerCase() === "are you so gay") {
             // When the user says a variation of "why are you so gay" mikuru asks them why they think that
