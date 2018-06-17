@@ -17,7 +17,8 @@ client.on("ready", () => {
     client.user.setActivity(`with the lolis :3`);
 });
 
-const cuss = ["fuck", "shit", "cunt"]
+const cuss = ["fuck", "shit", "cunt", "bitch", "whore", "hoe", "motherfucker", "asshole", "ass", "dick", "damn", "hell", 
+"nigga", "nigger"]
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
 
@@ -310,16 +311,6 @@ client.on("message", async message => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
             }, 800);
-        };
-
-        if (args.join(" ").toLowerCase() === "the fuck") {
-            // When the user says a variation of "what the fuck" mikuru gives a random response 
-            var temp = ["Watch the language.", "Don't say that here. (╬⓪益⓪)", "Watch your tongue~"];
-            message.channel.startTyping();
-            setTimeout(() => {
-                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
-                message.channel.stopTyping();
-            }, 1500);
         };
         break;
 
@@ -758,7 +749,7 @@ client.on("message", async message => {
 
     default:
         break;
-    };
+    };  
 });
 
 client.login(config.token);
