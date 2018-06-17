@@ -141,7 +141,7 @@ client.on("message", async message => {
         break;
 
     case "shut up":
-        // When the user says a variation of hello Mikuru gives a random response
+        // When the user says a variation of shut up Mikuru gives a random response
         var temp = ["What? Why?", "That's mean. (⌯˃̶᷄ ﹏ ˂̶᷄⌯)", "I didn't realize I talked that much. (︶︹︺)"];    
         message.channel.startTyping();
              setTimeout(() => {
@@ -161,7 +161,7 @@ client.on("message", async message => {
         break;
 
     case "woah":
-        // When the user says a variation of bye Mikuru gives a random response
+        // When the user says a variation of woah Mikuru gives a random response
         var temp = ["Dude...", "Whoa. :open_mouth:", "Woah what?"];    
         message.channel.startTyping();
              setTimeout(() => {
@@ -359,7 +359,7 @@ client.on("message", async message => {
         };
 
         if (args.join(" ").toLowerCase() === "is the quadratic formula") {
-            // When the user says a variation of "what is your favorite fortnite emote" mikuru gives a random response 
+            // When the user says a variation of "what is the quadratic formula" mikuru gives a random response 
             var temp = ["Negative b plus or minus the square root of b squared minus c all over 2(a)."];
             message.channel.startTyping();
             setTimeout(() => {
@@ -713,7 +713,7 @@ client.on("message", async message => {
     };
 
         if (args.join(" ").toLowerCase() === "trash") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur trash" mikuru gets sad
             var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -723,7 +723,7 @@ client.on("message", async message => {
     };
 
         if (args.join(" ").toLowerCase() === "thicc") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur thicc" mikuru gets confused
             var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -782,7 +782,7 @@ client.on("message", async message => {
     };
 
         if (args.join(" ").toLowerCase() === "trash") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur trash" mikuru gets sad
             var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -792,7 +792,7 @@ client.on("message", async message => {
     };
 
         if (args.join(" ").toLowerCase() === "thicc") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur thicc" mikuru gets confused
             var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -851,7 +851,7 @@ client.on("message", async message => {
     };
 
     if (args.join(" ").toLowerCase() === "trash") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur trash" mikuru gets sad
             var temp = ["I'm hurt. ლ(｡-﹏-｡ ლ)", "(ᗒᗩᗕ)՞", "Why do you think that? ;-;   "]; 
             message.channel.startTyping();
             setTimeout(() => {
@@ -861,7 +861,7 @@ client.on("message", async message => {
     };
 
         if (args.join(" ").toLowerCase() === "thicc") {
-            // When the user says a variation of "ur bad" mikuru gets sad
+            // When the user says a variation of "ur thicc" mikuru gets confused
             var temp = ["Um... is that a compliment?", "I don't know how to take that.", "I'll just ignore that."]; 
             message.channel.startTyping();
             setTimeout(() => {
