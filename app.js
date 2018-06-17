@@ -314,6 +314,16 @@ client.on("message", async message => {
                 message.channel.stopTyping();
             }, 800);
         };
+
+        if (args.join(" ").toLowerCase() === "is the quadratic formula") {
+            // When the user says a variation of "what is your favorite fortnite emote" mikuru gives a random response 
+            var temp = ["Negative b plus or minus the square root of b squared minus c all over 2(a)."];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 4000);
+        };
         break;
 
     case "where":
