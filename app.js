@@ -383,6 +383,16 @@ client.on("message", async message => {
              }, 2700);
          };
 
+         if (args.join(" ").toLowerCase() === "you like me") {
+             // When the user says a variation of "do you like me" mikuru tells them she does
+             var temp = ["Of course I do. (♥ω♥*)", "I always will~ ໒( ♥ ◡ ♥ )७", "Why wouldn't I? （^´▽｀^）"];
+             message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 2700);
+         };
+
          if (args.join(" ").toLowerCase() === "you hate me") {
             // When the user says a variation of "do you hate me" mikuru tells them she doesn't
             var temp = ["No, of course not~ ｢(ﾟﾍﾟ)", "Why do you think that? ｢(ﾟ<ﾟ)ﾞ??", "Of course I don't~ Σ(・Д・)!?"];
@@ -415,6 +425,18 @@ client.on("message", async message => {
                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
                 message.channel.stopTyping();
             }, 2800);
+        };
+    
+        if (args.join(" ").toLowerCase() === "you prefer anal") {
+            // When the user says a variation of "do you prefer anal" mikuru only loves her tortoise im sorry
+            var temp = ["I don't think I want to tell you.", "That's kind of a weird thing to ask here.",
+            "Don't ever ask me that again."
+            ];
+            message.channel.startTyping();
+            setTimeout(() => {
+                message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                message.channel.stopTyping();
+            }, 3800);
         };
         break;
         
