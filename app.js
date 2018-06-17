@@ -159,6 +159,16 @@ client.on("message", async message => {
              }, 1000);
         break;
 
+    case "woah":
+        // When the user says a variation of bye Mikuru gives a random response
+        var temp = ["Dude...", "Whoa. :open_mouth:", "Woah what?"];    
+        message.channel.startTyping();
+             setTimeout(() => {
+                 message.channel.send(temp[Math.floor(Math.random() * temp.length)]);
+                 message.channel.stopTyping();
+             }, 1000);
+        break;
+
     case "how":
          if (args.join(" ").toLowerCase().startsWith("old are you")) {
              // When the user asks "how old are you" mikuru gives a response
