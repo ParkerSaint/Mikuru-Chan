@@ -26,14 +26,14 @@ client.on("message", async message => {
     if (message.author.bot) return;
 
     // Check to see if the begining of the message has any of the prefixes
-    let correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1;
+    var correctPrefix = config.prefix.indexOf(message.content.toLowerCase().split(" ", 1).toString()) > -1;
 
     // Ignore any message that does not start with our prefix, 
     if (!correctPrefix) return;
 
     // Here we separate our "command" name, and our "arguments" for the command. 
-    const args = message.content.replace(/[,.!?]/gi, '').slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
+    var args = message.content.replace(/[,.!?]/gi, '').slice(message.content.toLowerCase().split(" ", 1).toString().length).trim().split(/ +/g);
+    var command = args.shift().toLowerCase();
     console.log(command + " " + args.join(" "));
 
     if (cuss.includes(command)) {
@@ -969,16 +969,27 @@ client.on("message", async message => {
     };
     break;
 
-    case "sample": 
-        message.channel.send("response 1");
-        const filter = m => {if (!m.author.bot && m.author === message.author) {return true;}};
-        message.channel.awaitMessages(filter, {
-                max: 1,
-                time: 5000,
-                errors: ['time']
-            })
-            .then(collected => message.channel.send("response 2"))
-            .catch(collected => message.channel.send("no answer in time"));
+    case "steven":
+        if (args.join(" ").toLowerCase() === "is gay") {
+            message.channel.send("I agree, but who else is?");
+            const filter = m => {if (!m.author.bot && m.author === message.author) {return true;}};
+            message.channel.awaitMessages(filter, {
+                    max: 1,
+                    time: 5000,
+                })
+                .then(collected => {
+                    var newMessage = collected.first().content;
+                    switch (newMessage) {
+                        case "you are":
+                            message.channel.send("kys");
+                            break;
+                    
+                        default:
+                            break;
+                    };
+                });
+            };
+        break;
 
     default:
         break;
