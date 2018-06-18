@@ -981,7 +981,11 @@ client.on("message", async message => {
                     var newMessage = collected.first().content;
                     switch (newMessage) {
                         case "you are":
-                            message.channel.send("kys");
+                            message.channel.startTyping();
+                            setTimeout(() => {
+                                message.channel.send("kys");
+                                message.channel.stopTyping();
+                            }, 10000);
                             break;
                     
                         default:
